@@ -1,9 +1,7 @@
 import { useState } from "react"
 import CategoriesList from "./CategoriesList"
 import GifExpo from "../GifsExpo"
-
 const Categories = ({categories = [], setCategories}) =>{
-
     const [inputValue, setInputValue] = useState("")
     const handleInput = ({target}) =>{
         setInputValue(target.value)
@@ -30,7 +28,9 @@ const Categories = ({categories = [], setCategories}) =>{
         Add
         </button>
         <br />
-        <CategoriesList categories={categories}/>
+        <CategoriesList 
+        categories={categories} 
+        setCategories={setCategories}/>
         <hr />
         <GifExpo categories={categories}/>
         </>
